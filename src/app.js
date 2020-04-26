@@ -12,3 +12,5 @@ closeBtn.addEventListener("click", function () {
 });
 
 // caos table content
+
+// fetch data and inject into list
