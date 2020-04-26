@@ -1,8 +1,11 @@
+/* import font */
 @import url("https://rsms.me/inter/inter.css");
 
 :root {
   --main-width: 75%;
 }
+
+/* define some bacis root styling */
 
 * {
   box-sizing: border-box;
@@ -13,11 +16,7 @@
   font-family: "Inter", sans-serif;
 }
 
-.main-container {
-  width: 100%;
-  margin: 0 auto;
-  height: 100px;
-}
+/* navbar styling */
 
 .navbar {
   display: flex;
@@ -26,7 +25,7 @@
   align-items: center;
   width: var(--main-width);
   margin: 0 auto;
-  padding: 10px;
+  padding: 12px 0px;
 }
 
 .links-wrapper {
@@ -35,11 +34,15 @@
 }
 
 .links-wrapper li {
-  color: white;
+  color: black;
   margin-right: 50px;
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
+}
+
+.links-wrapper li a {
+  color: white;
 }
 
 .main-btn {
@@ -47,6 +50,7 @@
   font-weight: 500;
   border-radius: 5px;
   border: none;
+  cursor: pointer;
 }
 
 .main-btn.nav-btn {
@@ -62,15 +66,86 @@
   margin: 0 auto;
 }
 
+/* navbar styling */
+
 .container.hero-section {
-  margin-top: 20px;
+  margin-top: 40px;
+}
+
+.onboard-wrapper p {
+  color: grey;
+  font-size: 12px;
+  margin-top: 5px;
 }
 
 .create-assignment-button {
-  background-color: #e25822;
+  background-color: #222831;
   color: white;
+  cursor: pointer;
 }
 
 .close-creator {
   cursor: pointer;
+}
+
+.create-course-group-btn.main-btn {
+  background-color: #1089ff;
+  color: white;
+  margin-left: 30px;
+}
+
+.create-btns-wrapper {
+  margin-top: 50px;
+}
+
+.create-assignmnet-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+/* modal styling  */
+
+.modal-bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.modal {
+  position: relative;
+}
+
+.airtable-embed {
+  height: 80vh;
+  width: 70vw;
+}
+
+.bg-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.close-modal {
+  color: black;
+  position: absolute;
+  /* size of the x button */
+  font-size: 22px;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+}
+/* modal styling  */
+
+.caos-assign-table {
+  margin-top: 50px;
 }

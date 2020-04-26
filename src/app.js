@@ -1,18 +1,14 @@
-// Get the modal
-var modal = document.getElementById("create-assignmnet-modal");
-modal.style.display = "none";
-// Get the button that opens the modal
-var btn = document.getElementById("create-button");
+// modal content
+var modalBtn = document.querySelector("#create-button");
+var modalBg = document.querySelector(".modal-bg");
+var closeBtn = document.querySelector(".close-modal");
 
-// Get the <span> element that closes the modal
-var span = document.getElementById("close-creator");
+modalBtn.addEventListener("click", function () {
+  modalBg.classList.add("bg-active");
+});
 
-// When the user clicks on the button, open the modal
-btn.onclick = function () {
-  modal.style.display = "block";
-};
+closeBtn.addEventListener("click", function () {
+  modalBg.classList.remove("bg-active");
+});
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
+// caos table content
