@@ -151,30 +151,51 @@
   cursor: pointer;
 }
 
-/*  assignment tabel styling  */
+/*  assignment table styling  */
 
 .caos-assign-table {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .table-hover {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  text-align: left;
 }
 
 .table-hover th {
-  padding: auto;
+  padding: 5px 5px;
   background-color: #222831;
   color: white;
-  font-size: small;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+}
+.table-hover th:last-child {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.table-hover th:first-child {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
 }
 
 .table-hover td {
-  border: solid 1px #dddddd;
-  padding: auto;
+  padding: 5px;
   text-align: center;
   font-size: smaller;
+  text-align: left;
+}
+
+.table-hover tr:hover {
+  background-color: #f5f6fa;
+  -webkit-box-shadow: 10px 10px 78px 34px rgba(0, 0, 0, 0.02);
+  -moz-box-shadow: 10px 10px 78px 34px rgba(0, 0, 0, 0.02);
+  box-shadow: 10px 10px 78px 34px rgba(0, 0, 0, 0.02);
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* course group styling */
@@ -308,4 +329,10 @@
   padding: auto;
   text-align: center;
   font-size: smaller;
+}
+
+.main-btn.edit-btn {
+  background-color: grey;
+  padding: 6px 10px;
+  color: white;
 }
