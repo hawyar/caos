@@ -63,9 +63,9 @@
             </div>
             <!-- create student group modal -->
 
-            <h1 style="margin-top: 60px;">Caos assignments </h1>
+            <h1 style="margin-top: 60px;">Assignments </h1>
             <!-- Assignments Table from CAOS -->
-            <div class="caos-assign-table">
+            <div class="main-table caos-assign-table">
                 <table class="table-hover">
                     <thead>
                         <tr>
@@ -87,33 +87,21 @@
 
             <!-- Course Groops Table from CAOS -->
 
-            <h1 style="margin-top: 60px;">List of stored CAOS Course Groups </h1>
+            <h1 style="margin-top: 60px;">Course Groups </h1>
 
-            <div class="caos-course-group-table">
-                <table class="course-groups-table-hover">
+            <div class="main-table caos-course-group-table">
+                <table class="table-hover table-course-groups">
                     <thead>
                         <tr>
                             <th scope="col">Name</th>
                             <th scope="col">Description</th>
                             <th scope="col">Included Courses</th>
-                            <th scope="col">Publish Status</th>
-                            <th scope="col">Edit Option </th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Option</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Group 1</td>
-                            <td>This is an example of a course groups that we created</td>
-                            <td>
-                                <ul>course 1</ul>
-                                <ul>course 2</ul>
-                                <ul>course 3</ul>
-                            </td>
-                            <td><input type="checkbox"></td>
-                            <td>
-                                <Button>Edit</Button>
-                            </td>
-                        </tr>
+                    <tbody id="courseGroupTableBody">
+                        
                     </tbody>
                 </table>
             </div>
@@ -121,10 +109,8 @@
             <!--this is the student groups table  -->
             <h1 style="margin-top: 60px;">List of stored Student Groups </h1>
 
-            <div class="caos-student-group-table">
-
-
-                <table class="student-groups-table-hover">
+            <div class="main table caos-student-group-table">
+                <table class="table-hover student-groups-table-hover">
                     <thead>
                         <tr>
                             <th scope="col">Name</th>

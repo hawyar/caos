@@ -43,8 +43,6 @@ closeBtnCsg.addEventListener("click", function () {
   modalBgCsg.classList.remove("bg-active");
 });
 
-const ul = document.getElementById("assignments");
-
 async function getCourses() {
   let accessToken = "keyI4tGmCyl6OTd8b";
 
@@ -72,13 +70,39 @@ async function getCourses() {
   });
 }
 
-// helper function to trigger a publish to Canvas
-function CaosAssignStatus(status) {
-  if (status) {
-    status = false;
-  }
-  return !status;
+async function getCourseGroup() {
+  let accessToken = "keyI4tGmCyl6OTd8b";
+
+  let response = await fetch(
+    `https://api.airtable.com/v0/appzTOklrPJbC8HUd/CourseGroups?api_key=${accessToken}`
+  );
+  let data = await response.json();
+
+  const courseGroupTableBody = document.getElementById("courseGroupTableBody");
+
+  // <td >${el.fields.Description}</td>
+  data.records.map((el) => {
+    var row = `<tr class="table-row">
+                  <td style="width: 160px;">${el.fields.Name}</td>
+                  <td style="width: 180px">${el.fields.Description}</td>
+                  <td style="width: 240px">${el.fields.Courses}</td>
+                  <td><input type="checkbox"></td>
+                  <td "><Button class="main-btn edit-btn">Edit</Button></td>
+                </tr>`;
+
+    setInnerHTML(courseGroupTableBody, row);
+  });
 }
+
+getCourseGroup();
+
+// // helper function to trigger a publish to Canvas
+// function CaosAssignStatus(status) {
+//   if (status) {
+//     status = false;
+//   }
+//   return !status;
+// }
 
 // helper functions
 const createNode = (element) => {
