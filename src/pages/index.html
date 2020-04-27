@@ -1,98 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="../styles/index.css" />
-    
+
     <title>CAOS | Home</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="main-container">
-      <div class="nav-wrapper">
-      <nav class="navbar">
-        <ul class="links-wrapper">
-          <li><a href="/">Dashboard</a></li> 
-        </ul>
-        <button class="main-btn nav-btn">View Templates</button>
-      </nav>
-    </div>
-
-
-    <!-- Page Content Section -->
-    <section class="container hero-section">
-
-      <div class="onboard-wrapper">
-        <h1>Welcome back, <strong>Robin</strong></h1>
-        <p>Manchester University, Professor</p>
-      </div>
-
-
-      <!-- Button group -->
-      <div class="create-btns-wrapper">
-        <button class="main-btn create-assignment-button"id="create-button">Create Assignment</button>
-        <button class="create-course-group-btn main-btn">Create Course Groups</button>
-      </div>
-      <!-- Button group -->
-
-
-
-      <!-- Create assignment Modal -->
-      <div class="modal-bg">
-        <div class="modal">
-         <span class="close-modal">&times;</span> 
-        <iframe class="airtable-embed" src="https://airtable.com/embed/shrEn7XQNT0wS0eGg?backgroundColor=green" frameborder="0" onmousewheel=""  style="background: transparent; "></iframe>
+        <div class="nav-wrapper">
+            <nav class="navbar">
+                <ul class="links-wrapper">
+                    <li><a href="index.html">Dashboard</a></li>
+                </ul>
+                <button class="main-btn nav-btn">View Templates</button>
+            </nav>
         </div>
-      </div>
-        <!-- Create assignment Modal -->
 
 
-        <!-- Assignments Table from CAOS -->
-        <!-- <div class="caos-assign-table">
+        <!-- Page Content Section -->
+        <section class="container hero-section">
+
+            <div class="onboard-wrapper">
+                <h1>Welcome back, <strong>Robin</strong></h1>
+                <p>Manchester University, Professor</p>
+            </div>
 
 
-        <table class="table table-hover">
-          <thead>
-            <tr class="table-light">
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </table>
-      </div> -->
-        <!-- Assignments Table from CAOS -->
+            <!-- Button group -->
+            <div class="create-btns-wrapper">
+                <button class="main-btn create-assignment-button" id="create-button">Create Assignment</button>
+                <button class="create-course-group-btn main-btn" id="create-ccg-button">Create Course Group</button>
+                <button class="create-student-group-btn main-btn" id="create-Student-button">Create Student Group</button>
+            </div>
+            <!-- Button group -->
 
 
-        <h1 style="margin-top: 60px;">List of stored CAOS assignments </h1>
-    <ul id="assignments">
-          
-    </ul>
-     
-      </section>
-       
-    <script src="../app.js"></script>
-  </body>
+
+            <!-- Create assignment Modal -->
+            <div class="modal-bg">
+                <div class="modal">
+                    <span class="close-modal">&times;</span>
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrEn7XQNT0wS0eGg?backgroundColor=green" frameborder="0" onmousewheel="" style="background: transparent; "></iframe>
+                </div>
+            </div>
+            <!-- Create assignment Modal -->
+
+            <!-- Create Course Groups Modal -->
+            <div class="modal-ccg">
+                <div class="modal-ccg-content">
+                    <span class="close-modal-ccg">&times;</span>
+                    <iframe class="airtable-embed-ccg" src="https://airtable.com/embed/shrJeocNw6Bza3FC4?backgroundColor=green" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>                    </div>
+            </div>
+            <!-- Create Course Groups Modal -->
+
+            <!-- create student group modal -->
+            <div class="modal-csg">
+                <div class ="modal-csg-content">
+                    <span class="close-modal-csg">&times;</span>
+                    <iframe class="airtable-embed-csg" src="https://airtable.com/embed/shrRtd54KDdXJUMau?backgroundColor=green" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+                </div>
+            </div>
+            <!-- create student group modal -->
+
+            <h1 style="margin-top: 60px;">List of stored CAOS assignments </h1>
+            <!-- Assignments Table from CAOS -->
+            <div class="caos-assign-table">
+
+
+                <table class="table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Available Date</th>
+                            <th scope="col">Due Date</th>
+                            <th scope="col">Close Date</th>
+                            <th scope="col">Links</th>
+                            <th scope="col">Publish Status</th>
+                            <th scope="col">Edit Option </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Assg One</td>
+                            <td>eat my ass</td>
+                            <td>now</td>
+                            <td>later</td>
+                            <td>even later</td>
+                            <td>google.com</td>
+                            <td><input type="checkbox"></td>
+                            <td>
+                                <Button>Edit</Button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Assignment One</td>
+                            <td>This is a fake assignement for this table, lets see how it looks</td>
+                            <td>April 26, 2020</td>
+                            <td>April 27, 2020</td>
+                            <td>May 15, 2020</td>
+                            <td>"google.com", "youtube.com", </td>
+                            <td><input type="checkbox"> </td>
+                            <td>
+                                <Button>Edit</Button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Course Groops Table from CAOS -->
+
+            <h1 style="margin-top: 60px;">List of stored CAOS Course Groups </h1>
+
+            <div class="caos-course-group-table">
+
+
+                <table class="course-groups-table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Included Courses</th>
+                            <th scope="col">Publish Status</th>
+                            <th scope="col">Edit Option </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Group 1</td>
+                            <td>This is an example of a course groups that we created</td>
+                            <td>
+                                <ul>course 1</ul>
+                                <ul>course 2</ul>
+                                <ul>course 3</ul>
+                            </td>
+                            <td><input type="checkbox"></td>
+                            <td>
+                                <Button>Edit</Button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!--this is the student groups table  -->
+            <h1 style="margin-top: 60px;">List of stored Student Groups </h1>
+
+            <div class="caos-student-group-table">
+
+
+                <table class="student-groups-table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Group Objective</th>
+                            <th scope="col">Students</th>
+                            <th scope="col">Publish Status</th>
+                            <th scope="col">Edit Option </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Group 1</td>
+                            <td>This is an example of a student group for blalablabla</td>
+                            <td>
+                                <ul>student 1</ul>
+                                <ul>student 2</ul>
+                                <ul>student 3</ul>
+                            </td>
+                            <td><input type="checkbox"></td>
+                            <td>
+                                <Button>Edit</Button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <br>
+            <br>
+        </section>
+
+        <script src="../app.js"></script>
+</body>
+
 </html>
