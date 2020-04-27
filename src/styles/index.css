@@ -310,20 +310,15 @@
 /* student groups table styling */
 
 .caos-student-group-table {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
-.student-groups-table-hover {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.student-groups-table-hover th {
+/* .student-groups-table-hover th {
   padding: auto;
   background-color: #10316b;
   color: white;
   font-size: small;
-}
+} */
 
 .student-groups-table-hover td {
   border: solid 1px #dddddd;
