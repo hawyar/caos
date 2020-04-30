@@ -96,14 +96,6 @@ async function getCourseGroup() {
 
 getCourseGroup();
 
-// // helper function to trigger a publish to Canvas
-// function CaosAssignStatus(status) {
-//   if (status) {
-//     status = false;
-//   }
-//   return !status;
-// }
-
 // helper functions
 const createNode = (element) => {
   return document.createElement(element);
@@ -119,19 +111,35 @@ const setInnerHTML = (parent, append) => {
 
 getCourses();
 
-//   for (var i = 0; i < data.length; i++) {
-//     var tr = createNode("tr");
-//     var th = createNode("th");
-//     var row = `<tr>
-//                     <td>hi</td>
-//                     <td>hi</td>
-//                     <td>hi</td>
-
-//                 </tr>`;
-
-//     assignmentTableBody.innerHTML += row;
-//     append(assignmentTable, assignmentTableBody);
+// // helper function to trigger a publish to Canvas
+// function CaosAssignStatus(status) {
+//   if (status) {
+//     status = false;
 //   }
-//   console.log(assignmentTableBody);
-//   return data;
+//   return !status;
 // }
+
+//post assignments
+
+function postCaosAssigment() {
+  var raw = JSON.stringify({
+    fields: { Name: " Testing post rq ", Description: "letss gooo" },
+  });
+
+  var requestOptions = {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: raw,
+    redirect: "follow",
+  };
+
+  fetch(
+    "https://api.airtable.com/v0/appzTOklrPJbC8HUd/Assignments?api_key=keyI4tGmCyl6OTd8b",
+    requestOptions
+  )
+    .then((response) => response.text())
+    .then((result) => console.log(result))
+    .catch((error) => console.log("error", error));
+}
+
+postCaosAssigment();
