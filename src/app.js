@@ -105,8 +105,8 @@ const append = (parent, child) => {
   return parent.appendChild(child);
 };
 
-const setInnerHTML = (parent, append) => {
-  parent.innerHTML += append;
+const setInnerHTML = (el, content) => {
+  el.innerHTML += content;
 };
 
 getCourses();
@@ -142,4 +142,32 @@ function postCaosAssigment() {
     .catch((error) => console.log("error", error));
 }
 
-postCaosAssigment();
+//postCaosAssigment();
+
+// Get courses from canvas api and populate into caos courses groups options
+
+async function getCanvasCourses() {
+  let response = await fetch(
+    "https://manchester.instructure.com/api/v1/courses?access_token=4633~aZJ6XBGUkPFnsPZbHEjpFKKO2sPcjS6KhomwhUptf8VaqCXqy3caCeD95Aekv6SW\n"
+  );
+  let data = await response.json();
+
+  let course = data.map((el) => {
+    el.name;
+  });
+}
+
+getCanvasCourses();
+
+function pushToCourseOption(name) {
+  console.log(name);
+  //
+}
+
+pushToCourseOption();
+
+// push each course to the airtable course group options
+
+// get all students from canvas and list them here
+
+// Each group can have many or none courses
