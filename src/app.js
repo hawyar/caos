@@ -30,7 +30,7 @@ closeBtnCcg.addEventListener("click", function () {
 });
 
 // create student group modal
-//content
+// content
 var modalBtnCsg = document.querySelector("#create-Student-button");
 var modalBgCsg = document.querySelector(".modal-csg");
 var closeBtnCsg = document.querySelector(".close-modal-csg");
@@ -56,8 +56,7 @@ async function getCourses() {
   // <td >${el.fields.Description}</td>
   data.records.map((el) => {
     var row = `<tr class="table-row">
-                  <td style="width: 180px;">${el.fields.Name}</td>
-                  
+                  <td style="width: 180px;">${el.fields.Name}</td>             
                   <td style="width: 100px">${el.fields["Available date"]}</td>
                   <td style="width: 100px">${el.fields["Due date"]}</td>
                   <td style="width: 100px">${el.fields["Close date"]}</td>
@@ -83,11 +82,11 @@ async function getCourseGroup() {
   // <td >${el.fields.Description}</td>
   data.records.map((el) => {
     var row = `<tr class="table-row">
-                  <td style="width: 160px;">${el.fields.Name}</td>
-                  <td style="width: 180px">${el.fields.Description}</td>
-                  <td style="width: 240px">${el.fields.Courses}</td>
+                  <td  style="width: 160px;">${el.fields.Name}</td>
+                  <td  style="width: 180px">${el.fields.Description}</td>
+                  <td  style="width: 240px">${el.fields.Courses}</td>
                   <td><input type="checkbox"></td>
-                  <td "><Button class="main-btn edit-btn">Edit</Button></td>
+                  <td><Button class="main-btn edit-btn">Edit</Button></td>
                 </tr>`;
 
     setInnerHTML(courseGroupTableBody, row);
@@ -150,21 +149,10 @@ async function getCanvasCourses() {
   let response = await fetch(
     "https://manchester.instructure.com/api/v1/courses?access_token=4633~aZJ6XBGUkPFnsPZbHEjpFKKO2sPcjS6KhomwhUptf8VaqCXqy3caCeD95Aekv6SW\n"
   );
+
   let data = await response.json();
-
-  let course = data.map((el) => {
-    el.name;
-  });
+  console.log(data.name);
 }
-
-getCanvasCourses();
-
-function pushToCourseOption(name) {
-  console.log(name);
-  //
-}
-
-pushToCourseOption();
 
 // push each course to the airtable course group options
 
